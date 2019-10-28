@@ -82,7 +82,7 @@ class App extends React.Component {
   }
 
   getAllPosts() {
-    fetch(devEnvironment)
+    fetch(prodEnvironment)
     .then(res => res.json())
     .then((data) => {
       this.setState({
@@ -132,7 +132,7 @@ class CreatePostModal extends React.Component {
         tags: state.tags
     };
 
-    fetch(devEnvironment, {
+    fetch(prodEnvironment, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
